@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="ANDROID APP"
+        tools:ignore="MissingConstraints"
+        android:background="#febb32"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textFontWeight="1000"
+        android:gravity="center"></TextView>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/username"
+        tools:ignore="MissingConstraints"></EditText>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/password">
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_sign_in"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Sign in"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            tools:ignore="MissingConstraints"></Button>
+        <Button
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/btn_cancel"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="Cancel"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            tools:ignore="MissingConstraints"></Button>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
