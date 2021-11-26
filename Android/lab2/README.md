@@ -1,0 +1,521 @@
+# 实验2 Android界面布局
+
+### 一、线性布局
+
+线性布局可使用属性android:orientation选择横向或纵向布局，
+本题使用一个最外层的Linelayout与四个小Linelayout嵌套布局
+
+实验代码：
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    >
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="One,One"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="One,Two"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="One,Three"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="One,Four"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Two,One"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Two,Two"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Two,Three"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Two,Four"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:text="Three,One"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:text="Three,Two"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:text="Three,Three"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:text="Three,Four"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="365dp"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Four,One"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Four,Two"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Four,Three"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:text="Four,Four"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#838383"></TextView>
+    </LinearLayout>
+
+
+</LinearLayout>
+```
+
+实验结果截图：
+
+[![IncMCD.png](https://z3.ax1x.com/2021/11/05/IncMCD.png)](https://imgtu.com/i/IncMCD)
+
+### 二、约束布局
+
+在组件中使用
+app:layout_constraintTop_toBottomOf 、 app:layout_constraintLeft_toRightOf 等调整组件相对位置
+其中注意每个组件要设置id
+
+实验代码：
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    
+    <TextView
+        android:textColor="#c0c0c0"
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:text="Input"
+        tools:ignore="MissingConstraints"
+        android:layout_margin="5dp"
+        android:textSize="40dp"
+        android:gravity="center|left"></TextView>
+    <TextView
+        android:background="#bbbb99"
+        android:id="@+id/num"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/input"
+        android:text="0.0"
+        android:layout_margin="5dp"
+        tools:ignore="MissingConstraints"
+        android:textSize="30dp"
+        android:gravity="center|right"></TextView>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="7"
+        android:layout_marginTop="50dp"
+        android:id="@+id/seven"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/num"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="4"
+        android:layout_marginTop="50dp"
+        android:id="@+id/four"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/seven"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="1"
+        android:layout_marginTop="50dp"
+        android:id="@+id/one"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/four"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="."
+        android:layout_marginTop="50dp"
+        android:id="@+id/dian"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/one"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="8"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/eight"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/num"
+        app:layout_constraintLeft_toRightOf="@+id/seven"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="5"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/five"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/four"
+        app:layout_constraintTop_toBottomOf="@+id/eight"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="2"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/two"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/one"
+        app:layout_constraintTop_toBottomOf="@+id/five"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="0"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/zero"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/dian"
+        app:layout_constraintTop_toBottomOf="@+id/two"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="9"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/nine"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/eight"
+        app:layout_constraintTop_toBottomOf="@+id/num"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="6"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/six"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/five"
+        app:layout_constraintTop_toBottomOf="@+id/nine"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="3"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/three"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/two"
+        app:layout_constraintTop_toBottomOf="@+id/six"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="="
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/denyu"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/zero"
+        app:layout_constraintTop_toBottomOf="@+id/three"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="÷"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/chu"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/nine"
+        app:layout_constraintTop_toBottomOf="@+id/num"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="×"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/chen"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/six"
+        app:layout_constraintTop_toBottomOf="@+id/chu"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="+"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/jia"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/three"
+        app:layout_constraintTop_toBottomOf="@+id/chen"></Button>
+    <Button
+        android:textColor="#000"
+        android:backgroundTint="#d6d7d7"
+        android:textSize="15dp"
+        android:text="-"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/jian"
+        android:layout_width="90dp"
+        android:layout_height="45dp"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintLeft_toRightOf="@+id/denyu"
+        app:layout_constraintTop_toBottomOf="@+id/jia"></Button>
+
+
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+```
+
+实验结果截图：
+
+[![Incu4O.png](https://z3.ax1x.com/2021/11/05/Incu4O.png)](https://imgtu.com/i/Incu4O)
+
+### 三、表格布局
+
+表格布局通过TableRow添加行数
+
+在每行中添加控件即可完成
+
+实验代码：
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Open...."></TextView>
+        <TextView
+            android:textColor="#848484"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-O"
+            android:gravity="right"></TextView>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save...."></TextView>
+        <TextView
+            android:textColor="#848484"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-S"
+            android:gravity="right"></TextView>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save As...."></TextView>
+        <TextView
+            android:textColor="#848484"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-Shift-S"
+            android:gravity="right"></TextView>
+    </TableRow>
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#848484"></View>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X Import...."></TextView>
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X Export...."></TextView>
+        <TextView
+            android:textColor="#848484"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Ctrl-E"
+            android:gravity="right"></TextView>
+    </TableRow>
+    <View android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#848484"></View>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textColor="#848484"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quit"></TextView>
+    </TableRow>
+</TableLayout>
+```
+
+实验结果截图：
+
+
+[![IncnUK.png](https://z3.ax1x.com/2021/11/05/IncnUK.png)](https://imgtu.com/i/IncnUK)
