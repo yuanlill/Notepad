@@ -103,6 +103,8 @@
 </LinearLayout>
 ```
 效果如图
+
+
 [![oVQeaR.png](https://z3.ax1x.com/2021/11/26/oVQeaR.png)](https://imgtu.com/i/oVQeaR)
 
 修改READ_NOTE_PROJECTION：
@@ -208,6 +210,8 @@ public View getView(int position, View convertView, ViewGroup parent) {
         
 ```
 如图
+
+
 [![oV10bQ.png](https://z3.ax1x.com/2021/11/26/oV10bQ.png)](https://imgtu.com/i/oV10bQ)
 
 ### 二、添加搜索功能
