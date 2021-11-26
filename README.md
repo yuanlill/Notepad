@@ -381,8 +381,14 @@ layout文件
 </LinearLayout>
 ```
 初始界面
+
+
 [![oVMS1O.jpg](https://z3.ax1x.com/2021/11/26/oVMS1O.jpg)](https://imgtu.com/i/oVMS1O)
+
+
 编译页面
+
+
 [![oVMPnH.jpg](https://z3.ax1x.com/2021/11/26/oVMPnH.jpg)](https://imgtu.com/i/oVMPnH)
 
 ### 四、实现背景更换功能
@@ -507,5 +513,9 @@ public void ColorSelect(View view){
 ```
 最终效果展示
 [![oVMpcD.jpg](https://z3.ax1x.com/2021/11/26/oVMpcD.jpg)](https://imgtu.com/i/oVMpcD)
+
+
 [![oVKvh6.jpg](https://z3.ax1x.com/2021/11/26/oVKvh6.jpg)](https://imgtu.com/i/oVKvh6)
+
+
 [![oVMiBd.jpg](https://z3.ax1x.com/2021/11/26/oVMiBd.jpg)](https://imgtu.com/i/oVMiBd)
