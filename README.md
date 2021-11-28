@@ -20,6 +20,56 @@
 
 ## 实验步骤
 
+### 一、最终功能展示
+
+1、新建日记功能
+
+
+[![onD2Us.png](https://z3.ax1x.com/2021/11/28/onD2Us.png)](https://imgtu.com/i/onD2Us)
+
+
+2、插入新日记功能
+
+
+[![onDR5n.png](https://z3.ax1x.com/2021/11/28/onDR5n.png)](https://imgtu.com/i/onDR5n)
+
+
+3、编辑日记（包括删除日记）
+
+
+[![oVMPnH.jpg](https://z3.ax1x.com/2021/11/26/oVMPnH.jpg)](https://imgtu.com/i/oVMPnH)
+
+
+5、修改标题
+
+
+[![onDgEj.png](https://z3.ax1x.com/2021/11/28/onDgEj.png)](https://imgtu.com/i/onDgEj)
+
+
+6、时间戳添加
+
+
+[![oVMS1O.jpg](https://z3.ax1x.com/2021/11/26/oVMS1O.jpg)](https://imgtu.com/i/oVMS1O)
+
+
+7、搜索功能
+
+
+[![oVKz9K.jpg](https://z3.ax1x.com/2021/11/26/oVKz9K.jpg)](https://imgtu.com/i/oVKz9K)
+
+
+8、UI美化
+
+
+[![oVMS1O.jpg](https://z3.ax1x.com/2021/11/26/oVMS1O.jpg)](https://imgtu.com/i/oVMS1O)
+
+
+9、背景更换
+
+
+[![oVMpcD.jpg](https://z3.ax1x.com/2021/11/26/oVMpcD.jpg)](https://imgtu.com/i/oVMpcD)
+
+##具体代码：
 ### 一、记录时间戳添加
 
 首先在每个item中添加时间戳的文本位置，顺便优化外观
@@ -103,8 +153,6 @@
 </LinearLayout>
 ```
 效果如图
-
-
 [![oVQeaR.png](https://z3.ax1x.com/2021/11/26/oVQeaR.png)](https://imgtu.com/i/oVQeaR)
 
 修改READ_NOTE_PROJECTION：
@@ -291,6 +339,8 @@ private void initView() {
         }
     }
 ```
+
+
 [![oVKz9K.jpg](https://z3.ax1x.com/2021/11/26/oVKz9K.jpg)](https://imgtu.com/i/oVKz9K)
 
 ### 三、UI美化
@@ -512,6 +562,8 @@ public void ColorSelect(View view){
     }
 ```
 最终效果展示
+
+
 [![oVMpcD.jpg](https://z3.ax1x.com/2021/11/26/oVMpcD.jpg)](https://imgtu.com/i/oVMpcD)
 
 
